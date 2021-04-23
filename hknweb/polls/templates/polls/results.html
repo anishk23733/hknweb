@@ -1,10 +1,6 @@
-<style>
-    html {
-        margin: 2rem;
+{% extends "base.html" %}
 
-    }
-</style>
-
+{% block content %}
 <h1>{{ question.question_text }}</h1>
 
 <ul>
@@ -14,5 +10,4 @@
 </ul>
 
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
-<br>
-<a href="{% url 'polls:index' %}">Return Home!</a>
+{% endblock %}

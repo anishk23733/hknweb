@@ -1,10 +1,6 @@
-<style>
-  html {
-    margin: 2rem;
+{% extends "base.html" %}
 
-  }
-</style>
-
+{% block content %}
 <h1>Welcome to Polls!</h1>
 
 {% if latest_question_list %}
@@ -16,5 +12,4 @@
 {% else %}
 <p>No polls are available.</p>
 {% endif %}
-
-<a href="../">Return to main website!</a>
+{% endblock %}

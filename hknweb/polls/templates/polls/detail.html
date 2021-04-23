@@ -1,9 +1,6 @@
-<style>
-  html {
-    margin: 2rem;
+{% extends "base.html" %}
 
-  }
-</style>
+{% block content %}
 <h1>{{ question.question_text }}</h1>
 
 {% if error_message %}
@@ -19,4 +16,4 @@
   <br>
   <input type="submit" value="Vote">
 </form>
-<a href="{% url 'polls:index' %}">Return to all polls!</a>
+{% endblock %}
